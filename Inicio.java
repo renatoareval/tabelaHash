@@ -10,7 +10,11 @@ public class Inicio {
         System.out.println(tabela.size());
 
         System.out.println(tabela.isEmpty());
+        tabela.remove("João");
 
         tabela.print();
+
+        System.out.println(tabela.size());
+
     }
 }

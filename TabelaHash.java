@@ -69,4 +69,31 @@ public class TabelaHash {
 
     }
 
+    public String remove(String chave){
+        int hash = Math.abs(chave.hashCode());
+        int indice = hash % tabela.length;
+
+        TabelaEntrada entrada = tabela[indice];
+       
+
+        for(int i = 0 ; i < tabela.length ; i++){
+            if (entrada.chave.equals(chave)) {
+                break;
+            }
+
+            indice++;
+            entrada = tabela[indice];
+        }
+        tabela[indice] = null ;
+           
+        return entrada.chave + entrada.valor ;
+        
+
+        
+    }
+
+
+    
+
+
 }
